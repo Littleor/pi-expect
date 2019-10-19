@@ -1,0 +1,24 @@
+#!/usr/bin/expect
+set timeout 10
+spawn minicom
+expect "*CTRL*"
+send "\1"
+send "e"
+send "AT+CGDCONT=1,\"IP\"\r\n"
+expect "*+ZPBIC: 1,1*"
+send "AT+CFUN=1\r\n"
+expect "*+CEREG: 1*"
+send "AT+CEREG=1\r\n"
+expect "*OK*"
+send "AT+CGREG?\r\n"
+expect "*+ZUEND: 1*"
+send "AT+CEREG?\r\n"
+expect "*OK*"
+send "AT+ZGACT=1,1\r\n"
+expect "*+ZCONSTAT: 1,1*"
+send "AT+CGPADDR=1\r\n"
+expect "*+CGPADDR: 1,*"
+send "\1"
+send "q"
+send "\r\n"
+interact
