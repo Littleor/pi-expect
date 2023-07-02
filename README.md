@@ -40,8 +40,4 @@ sudo vim /etc/rc.local
 ```
 
 ## 说明 
-具体操作得按自己的环境来,要求python2.x运行,并自己配置好后台服务器,python文件必须修改API接口才可以用哦!
-
-有问题可以[进我博客](https://blog.sixming.com/index.php/archives/41/#mdui-dialog)
-
-放个QQ交流群：826352486
+具体操作得按自己的环境来,要求python2.x运行,并自己配置好后台服务器,python文件必须修改API接口才可以用
